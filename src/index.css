@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.font-bebas {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E4FF47;
+}
+
+/* Selection */
+::selection {
+  background: #E4FF47;
+  color: #000;
+}
+
+/* Smooth animations */
+.transition-smooth {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Geometric elements */
+.geometric-line {
+  background: linear-gradient(90deg, transparent, #E4FF47, transparent);
+}
+
+/* Hide maplibre controls */
+.maplibregl-ctrl-attrib,
+.maplibregl-ctrl-logo,
+.maplibregl-compact {
+  display: none !important;
+}
+
+/* Telegram safe area */
+.telegram-safe-bottom {
+  padding-bottom: max(24px, env(safe-area-inset-bottom));
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .mobile-safe-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* Custom cursor for desktop */
+@media (hover: hover) {
+  a, button {
+    cursor: pointer;
+  }
+}
